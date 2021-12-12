@@ -45,6 +45,24 @@ A locally run server that communicates with the particle device over serial.
 
 A web app that can be run from an AWS server that will communicate with the device over cloud communication.
 
+<p align="center">
+  <a href="docs/img/AWS-Dashboard.png">
+    <img src="docs/img/AWS-Dashboard.png" width="500"> 
+  </a>
+</p>
+
+<p align="center">
+  <a href="docs/img/AWS-Login.png">
+    <img src="docs/img/AWS-Login.png" width="500"> 
+  </a>
+</p>
+
+<p align="center">
+  <a href="docs/img/AWS-Register.png">
+    <img src="docs/img/AWS-Register.png" width="500"> 
+  </a>
+</p>
+
 # 2 Getting Started
 
 ## Dependencies
@@ -73,7 +91,23 @@ After running, you should be able to start the server using
 $ npm start
 ```
 
-# 4 Authors
+# 4 Running the AWS Server
+
+If you wish to run the AWS server locally, you will need to get a SSL certificate and key and place them in the security folder. There are blank .cert and .key files in this folder already. They will need to be replaced by yours.
+
+After that, all of the server dependencies will need to be installed. This can be done by running the following command via the command line from the [AWS](src/AWS) directory.
+
+```
+$ npm install
+```
+
+After running, you should be able to start the server using
+
+```
+$ npm start
+```
+
+# 5 Authors
 
 - Jake Summerville
 - Martin Lopez
