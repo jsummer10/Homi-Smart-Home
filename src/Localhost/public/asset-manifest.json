@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.66c6114e.chunk.css",
+    "main.js": "/static/js/main.f5c088ff.chunk.js",
+    "main.js.map": "/static/js/main.f5c088ff.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.776c1e0d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.776c1e0d.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.c467c2e6.chunk.js": "/static/js/2.c467c2e6.chunk.js",
+    "static/js/2.c467c2e6.chunk.js.map": "/static/js/2.c467c2e6.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.66c6114e.chunk.css.map": "/static/css/main.66c6114e.chunk.css.map",
+    "static/js/2.c467c2e6.chunk.js.LICENSE.txt": "/static/js/2.c467c2e6.chunk.js.LICENSE.txt",
+    "static/media/PageNotFound.a6ff114e.png": "/static/media/PageNotFound.a6ff114e.png",
+    "static/media/door-close.16f02461.png": "/static/media/door-close.16f02461.png",
+    "static/media/door-open.45adcec7.png": "/static/media/door-open.45adcec7.png",
+    "static/media/light-100.27180d32.png": "/static/media/light-100.27180d32.png",
+    "static/media/light-25.019573ec.png": "/static/media/light-25.019573ec.png",
+    "static/media/light-50.a72ac995.png": "/static/media/light-50.a72ac995.png",
+    "static/media/light-75.cdbb79cc.png": "/static/media/light-75.cdbb79cc.png",
+    "static/media/light-off.0bfc97f5.png": "/static/media/light-off.0bfc97f5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.776c1e0d.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.c467c2e6.chunk.js",
+    "static/css/main.66c6114e.chunk.css",
+    "static/js/main.f5c088ff.chunk.js"
+  ]
+}
