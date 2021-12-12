@@ -2,3 +2,4 @@
 *.env
 */package-lock.json
 src/IoTSense/src/iotsense.cpp
+src/AWS/package-lock.json

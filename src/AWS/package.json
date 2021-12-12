@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "crypto": "^1.0.1",
+    "delay": "^5.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jade": "^1.11.0",
+    "mongoose": "^6.0.12",
+    "serialport": "^9.2.7",
+    "superagent": "^6.1.0"
+  }
+}

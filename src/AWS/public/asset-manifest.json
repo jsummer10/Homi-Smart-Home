@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d8f9e132.chunk.css",
+    "main.js": "/static/js/main.e4453d13.chunk.js",
+    "main.js.map": "/static/js/main.e4453d13.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.776c1e0d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.776c1e0d.js.map",
+    "static/css/2.67d44514.chunk.css": "/static/css/2.67d44514.chunk.css",
+    "static/js/2.73c0283e.chunk.js": "/static/js/2.73c0283e.chunk.js",
+    "static/js/2.73c0283e.chunk.js.map": "/static/js/2.73c0283e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.67d44514.chunk.css.map": "/static/css/2.67d44514.chunk.css.map",
+    "static/css/main.d8f9e132.chunk.css.map": "/static/css/main.d8f9e132.chunk.css.map",
+    "static/js/2.73c0283e.chunk.js.LICENSE.txt": "/static/js/2.73c0283e.chunk.js.LICENSE.txt",
+    "static/media/PageNotFound.a6ff114e.png": "/static/media/PageNotFound.a6ff114e.png",
+    "static/media/door-close.16f02461.png": "/static/media/door-close.16f02461.png",
+    "static/media/door-open.45adcec7.png": "/static/media/door-open.45adcec7.png",
+    "static/media/door-stm.721808cd.png": "/static/media/door-stm.721808cd.png",
+    "static/media/icon-diego.dfc5d222.jpg": "/static/media/icon-diego.dfc5d222.jpg",
+    "static/media/icon-jake.f796ab86.jpg": "/static/media/icon-jake.f796ab86.jpg",
+    "static/media/icon-martin.248a19dd.jpg": "/static/media/icon-martin.248a19dd.jpg",
+    "static/media/icon-user.ae3a914b.png": "/static/media/icon-user.ae3a914b.png",
+    "static/media/light-100.a72ac995.png": "/static/media/light-100.a72ac995.png",
+    "static/media/light-25.27180d32.png": "/static/media/light-25.27180d32.png",
+    "static/media/light-50.cdbb79cc.png": "/static/media/light-50.cdbb79cc.png",
+    "static/media/light-75.019573ec.png": "/static/media/light-75.019573ec.png",
+    "static/media/light-off.0bfc97f5.png": "/static/media/light-off.0bfc97f5.png",
+    "static/media/light-stm.6dcc333f.png": "/static/media/light-stm.6dcc333f.png",
+    "static/media/thermostat-cool-heat-stm.dab20595.png": "/static/media/thermostat-cool-heat-stm.dab20595.png",
+    "static/media/thermostat-fan-stm.e1b3457a.png": "/static/media/thermostat-fan-stm.e1b3457a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.776c1e0d.js",
+    "static/css/2.67d44514.chunk.css",
+    "static/js/2.73c0283e.chunk.js",
+    "static/css/main.d8f9e132.chunk.css",
+    "static/js/main.e4453d13.chunk.js"
+  ]
+}
