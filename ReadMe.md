@@ -117,7 +117,7 @@ $ npm start
 
 # 5 Hosting
 
-The web app is hosted on AWS and can be found [here](https://homi-smart-home.me) 
+The web app is hosted on AWS and can be found [here](https://ec2-3-139-236-201.us-east-2.compute.amazonaws.com:3000/) 
 
 # 6 Demo 
 
