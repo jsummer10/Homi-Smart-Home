@@ -101,7 +101,7 @@ $ npm start
 
 # 4 Running the AWS Server
 
-If you wish to run the AWS server locally, you will need to get a SSL certificate and key and place them in the security folder. There are blank .cert and .key files in this folder already. They will need to be replaced by yours.
+If you wish to run the AWS server locally, you will need to get a SSL certificate and key and place them in the security folder. There are blank .pem files in this folder already. They will need to be replaced by yours.
 
 After that, all of the server dependencies will need to be installed. This can be done by running the following command via the command line from the [AWS](src/AWS) directory.
 
