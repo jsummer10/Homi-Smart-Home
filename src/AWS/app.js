@@ -82,8 +82,8 @@ app.post('/particle/read',    particleRoute.read);
 https
   .createServer(
     {
-      key: fs.readFileSync("security/server.key"),
-      cert: fs.readFileSync("security/server.cert"),
+      key: fs.readFileSync("security/key.pem"),
+      cert: fs.readFileSync("security/cert.pem"),
     },
     app
   )
