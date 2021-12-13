@@ -29,14 +29,6 @@ The connections can be seen here
   </a>
 </p>
 
-The __webhook__ used is: https://homi-smart-home.me:3000/particle/report
-
-<p align="center">
-  <a href="docs/img/Webhook.png">
-    <img src="docs/img/Webhook.png" width="500"> 
-  </a>
-</p>
-
 Testing performed with the [Argon board](https://store.particle.io/products/argon-kit?_pos=2&_sid=7bc4f6ba0&_ss=r)
 
 ### Localhost
@@ -115,15 +107,11 @@ After running, you should be able to start the server using
 $ npm start
 ```
 
-# 5 Hosting
-
-The web app is hosted on AWS and can be found [here](https://ec2-3-136-58-132.us-east-2.compute.amazonaws.com:3000/) 
-
-# 6 Demo 
+# 5 Demo 
 
 The demo video can be found [here](https://www.youtube.com/watch?v=CH0R6P-GxI8)
 
-# 7 Authors
+# 6 Authors
 
 - Jake Summerville
 - Martin Lopez
