@@ -11,7 +11,7 @@ Utilized a MongoDB, Express, React, Node (MERN) stack to create a smart home web
 
 The server will connect to a Particle IoT device to read in sensor data.
 
-This design is composed of three components:
+This design is composed of three components: IoTSense, Localhost, and AWS.
 
 ### IoTSense
 
@@ -29,6 +29,14 @@ The connections can be seen here
   </a>
 </p>
 
+The __webhook__ used is: https://homi-smart-home.me:3000/particle/report
+
+<p align="center">
+  <a href="docs/img/Webhook.png">
+    <img src="docs/img/Webhook.png" width="500"> 
+  </a>
+</p>
+
 Testing performed with the [Argon board](https://store.particle.io/products/argon-kit?_pos=2&_sid=7bc4f6ba0&_ss=r)
 
 ### Localhost
@@ -43,7 +51,7 @@ A locally run server that communicates with the particle device over serial.
  
 ### AWS
 
-A web app that can be run from an AWS server that will communicate with the device over cloud communication.
+A web app that can be run from an AWS server that will communicate with the Particle device via cloud commands. This web app operates over HTTPS.
 
 <p align="center">
   <a href="docs/img/AWS-Dashboard.png">
@@ -107,7 +115,15 @@ After running, you should be able to start the server using
 $ npm start
 ```
 
-# 5 Authors
+# 5 Hosting
+
+The web app is hosted on AWS and can be found [here](https://homi-smart-home.me) 
+
+# 6 Demo 
+
+The demo video can be found [here](https://www.youtube.com/watch?v=CH0R6P-GxI8)
+
+# 7 Authors
 
 - Jake Summerville
 - Martin Lopez
