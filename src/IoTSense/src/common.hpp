@@ -14,7 +14,8 @@
 // timing
 #define PERIOD                100
 #define LOOP_FREQUENCY        (1000/PERIOD)
-#define SERIAL_COMM_FREQUENCY 1   // 1 Hz
+#define SERIAL_COMM_FREQUENCY 1     // 1 Hz
+#define PUBLISH_FREQUENCY     1     // 1 Hz
 
 // LED
 #define LED D7

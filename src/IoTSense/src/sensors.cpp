@@ -12,14 +12,7 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 char jsondata[256];
-unsigned long lastPublish = 0;
-
-/**
- * Determine when publish should occur
- */
-bool shouldPublish() {
-    return (unsigned long) Time.now() > lastPublish + PUBLISH_INTERVAL;
-}
+String jsonDataStr;
 
 /**
  * Handler for Particle subscribe
@@ -37,12 +30,8 @@ void myHandler(const char *event, const char *data){
  */
 void Sensors::init() {
     dht.begin();
-    Particle.subscribe("hook-response/IotSense", myHandler, MY_DEVICES);
-    Particle.variable("Temperature", &(sensorData.temp),     DOUBLE);
-    Particle.variable("Humidity",    &(sensorData.humidity), DOUBLE);
-    Particle.variable("LightSensor", &(sensorData.light),    INT);
-    Particle.variable("DoorSensor",  &(sensorData.door),     INT);
-    Particle.variable("HomiData",    jsondata); 
+    Particle.subscribe("hook-response/homidata", myHandler);
+    jsonDataStr = "";
 }
 
 /**
@@ -59,25 +48,24 @@ void Sensors::getData() {
 }
 
 /**
- * Serial print all of sensorData in JSON
+ * Save data into a formatted JSON string
  */
-void Sensors::print() {
+void Sensors::saveString() {
     // verify data is present prior to printing
-    if (isnan(sensorData.humidity) || isnan(sensorData.temp) || isnan(sensorData.light) || isnan(sensorData.door)) {
+    if (isnan(sensorData.humidity) || isnan(sensorData.temp) || 
+        isnan(sensorData.light) || isnan(sensorData.door)) {
         return;
     }
 
-    snprintf(jsondata, sizeof(jsondata), "{\"t\":%d,\"temp\":%.1f,\"humidity\":%.1f,\"light\":%d,\"door\":%d}", 
+    jsonDataStr = String::format("{\"t\":%d,\"temp\":%.1f,\"humidity\":%.1f,\"light\":%d,\"door\":%d}", 
         (int)Time.now(), sensorData.temp, sensorData.humidity, sensorData.light, sensorData.door);
+}
 
-    // convert values to char
-    sprintf(sensorChar.temp,     "%.1f", sensorData.temp);
-    sprintf(sensorChar.humidity, "%.1f", sensorData.humidity);
-    sprintf(sensorChar.light,    "%d",   sensorData.light);
-    sprintf(sensorChar.door,     "%d",   sensorData.door);
-
-    // serial prints of json
-    Serial.print(jsondata);
+/**
+ * Serial print all of sensorData in JSON
+ */
+void Sensors::serialPrint() {
+    Serial.print(jsonDataStr);
     Serial.println("");
 }
 
@@ -85,11 +73,5 @@ void Sensors::print() {
  * Publish the sensor data to the cloud
  */
 void Sensors::publish() {
-    if(shouldPublish()) {
-        Particle.publish("Temperature", sensorChar.temp,     PRIVATE);
-        Particle.publish("Humidity",    sensorChar.humidity, PRIVATE);
-        Particle.publish("LightSensor", sensorChar.light,    PRIVATE);
-        Particle.publish("DoorSensor",  sensorChar.door,     PRIVATE);
-        lastPublish = Time.now();
-    }
+    Particle.publish("homidata", jsonDataStr, PRIVATE);
 }

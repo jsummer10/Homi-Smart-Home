@@ -14,7 +14,11 @@ SYSTEM_THREAD(ENABLED);
 SmartLight smartLight;
 Sensors sensors;
 int counter;
+String rxCloudCmdStr;
 
+/**
+ * Process serial commands
+ */
 void serialCmdProcessing() {
     if (Serial.available() <= 0) return;
     String cmdStr = "";
@@ -35,6 +39,33 @@ void serialCmdProcessing() {
 }
 
 /**
+ * Read in cloud commands
+ * @param String cloud command
+ */
+int updateRxCmd(String cmdStr) {
+    rxCloudCmdStr = cmdStr;
+    return 0;
+}
+
+/**
+ * Process cloud commands
+ */
+void cloudCmdProcessing() {
+    if (rxCloudCmdStr == "") return;
+    
+    JSONValue cmdJson = JSONValue::parseCopy(rxCloudCmdStr);
+    JSONObjectIterator iter(cmdJson);
+
+    while (iter.next()) {
+        if (iter.name() == "smartlight") {
+            smartLight.cmdProcessing(iter.value());
+        }
+    }
+
+  rxCloudCmdStr = "";
+}
+
+/**
  * Main Particle setup function
  */
 void setup() {
@@ -42,8 +73,10 @@ void setup() {
     pinMode(LED, OUTPUT);
     RGB.control(true);
     RGB.color(255, 255, 255);
-    sensors.init();
     counter = 0;
+
+    Particle.function("cloudcmd", updateRxCmd);
+    sensors.init();
 }
 
 /**
@@ -51,12 +84,15 @@ void setup() {
  */
 void loop() {
     serialCmdProcessing();
+    cloudCmdProcessing();
+
     smartLight.execute();
 
     if (counter % (SERIAL_COMM_FREQUENCY * LOOP_FREQUENCY) == 0) {
         counter = 0;
         sensors.getData();
-        sensors.print();
+        sensors.saveString();
+        sensors.serialPrint();
         sensors.publish();
     }
 

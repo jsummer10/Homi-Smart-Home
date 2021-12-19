@@ -31,8 +31,9 @@ public:
     Sensors() {}
     void init();
     void getData();
-    void print();
+    void serialPrint();
     void publish();
+    void saveString();
 private:
     SensorData sensorData;
     SensorChar sensorChar; 
